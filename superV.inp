@@ -1,0 +1,143 @@
+#
+# superV input file
+#
+ResultExportFreq 100
+TecplotMeshExport 0
+ParaviewMeshExport 0
+ParaviewListExport 100
+WriteVTKflowResults 0
+#AnalFlowField 3
+
+#
+#MaxPartNNF (number of particle not found limit, before deactivate)
+maxPartNNF 10
+
+#
+#Poly Interpolation Method (1-MVC,2-TetDec)
+polyInterpol 1
+
+#
+#PurgeOldRes ( sVbin nec dir:parares dir:binary )
+PurgeOldRes 0 0 1 1
+
+#
+#
+TimeStep 1e-05
+#NumberOfTimeSteps 1430
+NumberOfTimeSteps 20000
+
+#
+# MoveModel ( 0 = massless, 1 = RungeKutta4, 2= Euler )
+MoveModel 1
+
+#
+# Gravity magnitude, direction
+Gravity 9.81 0 0 -1.0 
+
+#
+# Force models
+# Forces Gravity StokesDrag EllipticDrag AddedMassPressureCorrection
+Forces 1 1 0 0
+
+#
+# FluidFlow L, u0, mu, rho
+# (water, 10mm, 10mm/s)
+#FluidFlow 0.01 0.01 0.000001 1000
+
+#air
+FluidFlow 1 1 0.0000156 1.225
+
+#
+# Particle statements, injects particles into flow
+#Particles 2 0 1 1E-04 1E-04 1E-04 1 1 1000 0.01 0.01 0.08 0.08 0.005 0.005
+#Particles 1 0 10 5.0E-06 5E-06 5.0E-06 1 1 1000 0 0 0 movingWall
+
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 0.01 0.08 0.005
+
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 8000 0.005 0.095 0.05
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 8000 0.010 0.090 0.05
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 8000 0.015 0.085 0.05
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 8000 0.020 0.080 0.05
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 8000 0.025 0.075 0.05
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 8000 0.030 0.070 0.05
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 8000 0.035 0.065 0.05
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 8000 0.040 0.060 0.05
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 8000 0.045 0.055 0.05
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 8000 0.050 0.050 0.05
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 8000 0.055 0.045 0.05
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 8000 0.060 0.040 0.05
+
+#Problematic case 1 - save for testing!!!! 
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 8000 0.010 0.090 0.05
+
+#Problematic cases 2 - save for testing!!!! 
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 8000 0.045 0.055 0.05
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 8000 0.055 0.045 0.05
+
+#Problematic case 3 - save for testing!!!! 
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 8000 0.005 0.095 0.05
+
+#Validation case
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 0.010 0.090 0.05
+
+#Lung case
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 -0.005 0.001 -0.005
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 -0.0025 0.001 -0.005
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 0.000 0.001 -0.005
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 0.0025 0.001 -0.005
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 0.005 0.001 -0.005
+#
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 -0.005 0.001 -0.0025
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 -0.0025 0.001 -0.0025
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 0.000 0.001 -0.0025
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 0.0025 0.001 -0.0025
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 0.005 0.001 -0.0025
+#
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 -0.005 0.001 0.0
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 -0.0025 0.001 0.0
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 0.000 0.001 0.0
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 0.0025 0.001 0.0
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 0.005 0.001 0.0
+#
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 -0.005 0.001 0.0025
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 -0.0025 0.001 0.0025
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 0.000 0.001 0.0025
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 0.0025 0.001 0.0025
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 0.005 0.001 0.0025
+#
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 -0.005 0.001 0.005
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 -0.0025 0.001 0.005
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 0.000 0.001 0.005
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 0.0025 0.001 0.005
+#Particles 3 0 1 5.0E-06 5E-06 5.0E-06 1 1 1000 0.005 0.001 0.005
+
+
+###
+Particles 2 0 100000 5.0E-06 5E-06 5.0E-06 1 1 1750 0 0 0 inlet
+
+###
+#Particles 2 0 10000 5.0E-06 5E-06 5.0E-06 1 1 1750 0 0 0 movingWall
+
+#
+#VTKflowResults
+#
+
+#VTKflowResults FoamResults/cavity/VTK/cavity_2000.vtk
+#FoamMeshDir FoamResults/cavity/constant/polyMesh
+
+#VTKflowResults FoamResults/cavityPolyCoarse/VTK/cavityPolyCoarse_2000.vtk
+#FoamMeshDir FoamResults/cavityPolyCoarse/constant/polyMesh
+
+#VTKflowResults FoamResults/cavityPoly/VTK/cavityPoly_2000.vtk
+#FoamMeshDir FoamResults/cavityPoly/constant/polyMesh
+
+#VTKflowResults FoamResults/cavityPolyCoarseGradTest/VTK/cavityPolyCoarseGradTest_0.vtk.out
+#FoamMeshDir FoamResults/cavityPolyCoarseGradTest/constant/polyMesh
+
+VTKflowResults FoamResults/mouthParticles3/VTK/mouthParticles3_0.vtk
+FoamMeshDir FoamResults/mouthParticles3/constant/polyMesh
+
+
+#Particles 2 0 10000 5.0E-06 5E-06 5.0E-06 1 1 1750 0 0 0 asci_01_inlet
+#VTKflowResults /home/mstrakl/OpenFOAM/mstrakl-7/run/doc/SimInhale/nov20/lung_case_v15/VTK/lung_case_v15_2800.vtk
+#FoamMeshDir /home/mstrakl/OpenFOAM/mstrakl-7/run/doc/SimInhale/nov20/lung_case_v15/constant/polyMesh
